@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { products } from './core/data/products';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +7,4 @@ import { products } from './core/data/products';
 })
 export class AppComponent {
   title = 'progress-task';
-  public gridData: any[] = products;
 }
