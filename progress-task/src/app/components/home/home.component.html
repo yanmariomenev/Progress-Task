@@ -22,7 +22,11 @@
 [sort]="sort"
 (sortChange)="sortChange($event)"
 >
-<kendo-grid-column field="id" title="Id" class="no-padding" width="20">
+<kendo-grid-column field="id" title="Id" class="no-padding" width="20"
+[headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}"
+    [style]="{'background-color': '#888','color': '#fff'}"
+    [footerStyle]="{'background-color': '#888','color': '#fff'}"
+    *ngIf="checked">
     <ng-template kendoGridCellTemplate let-gridView>
         <span [ngStyle]= "{color: getColor(gridView.id)}">
             {{gridView.id}}
@@ -35,17 +39,25 @@
      [footerStyle]="{'background-color': '#888','color': '#fff'}"
      >
     </kendo-grid-column>
-    <kendo-grid-column field="last_name" title="Last name" width="50">
+    <kendo-grid-column field="last_name" title="Last name" width="50"
+    [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}"
+    [style]="{'background-color': '#888','color': '#fff'}"
+    [footerStyle]="{'background-color': '#888','color': '#fff'}">
     </kendo-grid-column>
-    <kendo-grid-column field="email" title="Email" width="90">
+    <kendo-grid-column field="email" title="Email" width="90" 
+    [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}">
     </kendo-grid-column>
-    <kendo-grid-column field="country" title="Country" width="30">
+    <kendo-grid-column field="country" title="Country" width="30"
+    [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}">
     </kendo-grid-column>
-    <kendo-grid-column field="ip_address" title="IP address" width="40">
+    <kendo-grid-column field="ip_address" title="IP address" width="40"
+    [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}">
     </kendo-grid-column>
-    <kendo-grid-column field="currency" title="Currency" width="25">
+    <kendo-grid-column field="currency" title="Currency" width="25"
+    [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}">
     </kendo-grid-column>
-    <kendo-grid-column field="amount" title="Amount" class="no-padding" width="60">
+    <kendo-grid-column field="amount" title="Amount" class="no-padding" width="60"
+    [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}">
         <ng-template kendoGridCellTemplate let-gridView>
             <span [ngStyle]= "{color: getColorForAmount(gridView.amount)}">
                 {{gridView.amount}}
@@ -59,5 +71,5 @@
         </ng-template>
     </kendo-grid-column> -->
   </kendo-grid>
-  <button type="button" class="btn btn-primary">Primary</button>
-  <button kendobutton="" style="width: 43%;" role="button" aria-disabled="false" dir="ltr" class="k-button k-primary"> home works </button>
+  <h3>Remove id's</h3>
+  <kendo-switch [(ngModel)]="checked"></kendo-switch>

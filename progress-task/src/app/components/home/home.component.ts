@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit, OnDestroy  {
   public userSubscription: Subscription;
   public gridView: GridDataResult;
   private items: User[];
-
+  public checked = true;
   public multiple = false;
   public allowUnsort = true;
   public sort: SortDescriptor[] = [
