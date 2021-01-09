@@ -1,19 +1,25 @@
 <kendo-grid [data]="gridData" [height]="410">
-    <kendo-grid-column field="ProductID" title="ID" width="40">
+    <kendo-grid-column field="id" title="ID" width="40">
     </kendo-grid-column>
-    <kendo-grid-column field="ProductName" title="Name" width="250">
+    <kendo-grid-column field="first_name" title="First name" width="120" >
     </kendo-grid-column>
-    <kendo-grid-column field="Category.CategoryName" title="Category">
+    <kendo-grid-column field="last_name" title="Last name" width="120">
     </kendo-grid-column>
-    <kendo-grid-column field="UnitPrice" title="Price" width="80">
+    <kendo-grid-column field="email" title="Email" width="180">
     </kendo-grid-column>
-    <kendo-grid-column field="UnitsInStock" title="In stock" width="80">
+    <kendo-grid-column field="country" title="Country" width="90">
     </kendo-grid-column>
-    <kendo-grid-column field="Discontinued" title="Discontinued" width="120">
+    <kendo-grid-column field="ip_address" title="IP address" width="130">
+    </kendo-grid-column>
+    <kendo-grid-column field="currency" title="Currency" width="25">
+    </kendo-grid-column>
+    <kendo-grid-column field="amount" title="Amount" width="60">
+    </kendo-grid-column>
+    <!-- <kendo-grid-column field="Discontinued" title="Discontinued" width="120">
         <ng-template kendoGridCellTemplate let-dataItem>
             <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>
         </ng-template>
-    </kendo-grid-column>
+    </kendo-grid-column> -->
   </kendo-grid>
   <button type="button" class="btn btn-primary">Primary</button>
   <button kendobutton="" style="width: 43%;" role="button" aria-disabled="false" dir="ltr" class="k-button k-primary"> home works </button>

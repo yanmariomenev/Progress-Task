@@ -10,7 +10,7 @@
         "country":"Indonesia",
         "avatar":"https://robohash.org/sequisintnecessitatibus.bmp?size=50x50&set=set1",
         "currency":"IDR",
-        "amount":"$230.57"
+        "amount":"230.57"
      },
      {
         "id":2,
@@ -22,7 +22,7 @@
         "country":"Sweden",
         "avatar":"https://robohash.org/laudantiumquiadolores.jpg?size=50x50&set=set1",
         "currency":"SEK",
-        "amount":"$443.39"
+        "amount":"443.39"
      },
      {
         "id":3,
@@ -34,7 +34,7 @@
         "country":"China",
         "avatar":"https://robohash.org/assumendaexplicabovitae.png?size=50x50&set=set1",
         "currency":"CNY",
-        "amount":"$1213.00"
+        "amount":"1213.00"
      },
      {
         "id":4,
@@ -46,7 +46,7 @@
         "country":"China",
         "avatar":"https://robohash.org/exercitationemdignissimosrepellat.bmp?size=50x50&set=set1",
         "currency":"CNY",
-        "amount":"$626.92"
+        "amount":"626.92"
      },
      {
         "id":5,
@@ -58,7 +58,7 @@
         "country":"Thailand",
         "avatar":"https://robohash.org/nullaetsimilique.bmp?size=50x50&set=set1",
         "currency":"THB",
-        "amount":"$2120.97"
+        "amount":"2120.97"
      },
      {
         "id":6,
@@ -70,7 +70,7 @@
         "country":"North Korea",
         "avatar":"https://robohash.org/isteculpaarchitecto.bmp?size=50x50&set=set1",
         "currency":"KPW",
-        "amount":"$427.70"
+        "amount":"427.70"
      },
      {
         "id":7,
@@ -82,7 +82,7 @@
         "country":"France",
         "avatar":"https://robohash.org/velitestmolestiae.jpg?size=50x50&set=set1",
         "currency":"EUR",
-        "amount":"$1968.31"
+        "amount":"1968.31"
      },
      {
         "id":8,
@@ -94,7 +94,7 @@
         "country":"China",
         "avatar":"https://robohash.org/dolorlaudantiumanimi.jpg?size=50x50&set=set1",
         "currency":"CNY",
-        "amount":"$2050.60"
+        "amount":"2050.60"
      },
      {
         "id":9,
@@ -106,7 +106,7 @@
         "country":"China",
         "avatar":"https://robohash.org/aliascumquequia.png?size=50x50&set=set1",
         "currency":"CNY",
-        "amount":"$272.30"
+        "amount":"272.30"
      },
      {
         "id":10,
@@ -118,7 +118,7 @@
         "country":"Brazil",
         "avatar":"https://robohash.org/nonnihilvoluptatem.bmp?size=50x50&set=set1",
         "currency":"BRL",
-        "amount":"$51.55"
+        "amount":"51.55"
      },
      {
         "id":11,
@@ -130,7 +130,7 @@
         "country":"Thailand",
         "avatar":"https://robohash.org/quodlaudantiumdoloremque.bmp?size=50x50&set=set1",
         "currency":"THB",
-        "amount":"$971.78"
+        "amount":"971.78"
      },
      {
         "id":12,
@@ -142,7 +142,7 @@
         "country":"Canada",
         "avatar":"https://robohash.org/veritatisipsumeveniet.bmp?size=50x50&set=set1",
         "currency":"CAD",
-        "amount":"$1036.92"
+        "amount":"1036.92"
      },
      {
         "id":13,
@@ -154,7 +154,7 @@
         "country":"Russia",
         "avatar":"https://robohash.org/utestvoluptatem.png?size=50x50&set=set1",
         "currency":"RUB",
-        "amount":"$2221.63"
+        "amount":"2221.63"
      },
      {
         "id":14,
@@ -166,7 +166,7 @@
         "country":"Japan",
         "avatar":"https://robohash.org/rerumvelitvoluptas.jpg?size=50x50&set=set1",
         "currency":"JPY",
-        "amount":"$1351.07"
+        "amount":"1351.07"
      },
      {
         "id":15,
@@ -178,7 +178,7 @@
         "country":"Nigeria",
         "avatar":"https://robohash.org/veritatisutquia.bmp?size=50x50&set=set1",
         "currency":"NGN",
-        "amount":"$1358.76"
+        "amount":"1358.76"
      }
   ]
 }
