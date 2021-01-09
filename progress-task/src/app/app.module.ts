@@ -9,6 +9,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { InputsModule } from '@progress/kendo-angular-inputs';
+
+
 
 
 @NgModule({
@@ -23,7 +27,9 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     AppRoutingModule,
     HttpClientModule,
     GridModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    DropDownsModule,
+    InputsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
