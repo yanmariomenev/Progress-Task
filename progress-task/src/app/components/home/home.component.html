@@ -22,9 +22,18 @@
 [sort]="sort"
 (sortChange)="sortChange($event)"
 >
-    <kendo-grid-column field="id" title="ID" width="20">
-    </kendo-grid-column>
-    <kendo-grid-column field="first_name" title="First name" width="50" >
+<kendo-grid-column field="id" title="Id" class="no-padding" width="20">
+    <ng-template kendoGridCellTemplate let-gridView>
+        <span [ngStyle]= "{color: getColor(gridView.id)}">
+            {{gridView.id}}
+        </span>
+    </ng-template>
+ </kendo-grid-column>
+    <kendo-grid-column field="first_name" title="First name" width="50"
+     [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}"
+     [style]="{'background-color': '#888','color': '#fff'}"
+     [footerStyle]="{'background-color': '#888','color': '#fff'}"
+     >
     </kendo-grid-column>
     <kendo-grid-column field="last_name" title="Last name" width="50">
     </kendo-grid-column>
@@ -36,8 +45,14 @@
     </kendo-grid-column>
     <kendo-grid-column field="currency" title="Currency" width="25">
     </kendo-grid-column>
-    <kendo-grid-column field="amount" title="Amount" width="60">
-    </kendo-grid-column>
+    <kendo-grid-column field="amount" title="Amount" class="no-padding" width="60">
+        <ng-template kendoGridCellTemplate let-gridView>
+            <span [ngStyle]= "{color: getColorForAmount(gridView.amount)}">
+                {{gridView.amount}}
+            </span>
+        </ng-template>
+     </kendo-grid-column>
+
     <!-- <kendo-grid-column field="Discontinued" title="Discontinued" width="120">
         <ng-template kendoGridCellTemplate let-dataItem>
             <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>

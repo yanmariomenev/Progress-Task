@@ -61,6 +61,13 @@ private sortItems(): void {
   };
 }
 
+getColor(id: number, amount: number){
+  return id % 2 == 0 ? 'purple' : 'blue';
+ }
+ getColorForAmount(amount: number){
+  return amount >= 500 ? 'green' : 'red';
+ }
+
 private loadData(){
   this.userSubscription = this.userService.getUsers().subscribe((userData: User[]) =>
   {console.log(userData), this.items = userData; this.loadUsers()})
