@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { InputsModule } from '@progress/kendo-angular-inputs';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -26,6 +27,7 @@ import { InputsModule } from '@progress/kendo-angular-inputs';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
     GridModule,
     BrowserAnimationsModule,
     DropDownsModule,

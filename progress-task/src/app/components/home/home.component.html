@@ -1,8 +1,26 @@
-<kendo-grid [data]="gridView" [height]="410" 
+<div class="example-config">
+    <label class="k-form-field">
+        <input class="k-checkbox" type="checkbox" id="allowUnsort" [(ngModel)]="allowUnsort" />
+        <label class="k-checkbox-label" for="allowUnsort"> Toggle unsorting </label> </label
+    ><br />
+    <label class="k-form-field">
+        <input class="k-checkbox" type="checkbox" id="multiple" [(ngModel)]="multiple" />
+        <label class="k-checkbox-label" for="multiple"> Toggle multiple columns sorting </label>
+    </label>
+</div>
+<kendo-grid 
+[data]="gridView" 
+[height]="410" 
 [pageSize]="pageSize"
 [skip]="skip"
 [pageable]="true"
 (pageChange)="pageChange($event)"
+[sortable]="{
+    allowUnsort: allowUnsort,
+    mode: multiple ? 'multiple' : 'single'
+}"
+[sort]="sort"
+(sortChange)="sortChange($event)"
 >
     <kendo-grid-column field="id" title="ID" width="20">
     </kendo-grid-column>

@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
+import { SortDescriptor, orderBy  } from '@progress/kendo-data-query';
 import { Subscription } from 'rxjs';
-import { products } from 'src/app/core/data/products';
 import { UserService } from 'src/app/core/services/user.service';
 import { IUser, User } from '../models/IUser.model';
 
@@ -14,15 +14,24 @@ export class HomeComponent implements OnInit, OnDestroy  {
 
   constructor(private userService: UserService) {
    }
+
   public pageSize = 10;
   public skip = 0;
   public userSubscription: Subscription;
   public gridView: GridDataResult;
   private items: User[];
 
+  public multiple = false;
+  public allowUnsort = true;
+  public sort: SortDescriptor[] = [
+  {
+    field: 'amount',
+    dir: 'desc'
+  },
+  ];
+
   ngOnInit(): void {
-    this.userSubscription = this.userService.getUsers().subscribe((userData: User[]) =>
-    {console.log(userData), this.items = userData; this.loadUsers()})
+   this.loadData();
   }
 
   ngOnDestroy() {
@@ -39,5 +48,23 @@ export class HomeComponent implements OnInit, OnDestroy  {
         total: this.items.length
     };
   }
+  public sortChange(sort: SortDescriptor[]): void {
+    this.sort = sort;
+    this.sortItems();
+  
+}
+// Need to fix sorting of the amount. Doesn't sort numbers correctly.
+private sortItems(): void {
+  this.gridView = {
+      data: orderBy(this.items, this.sort),
+      total: this.items.length
+  };
+}
+
+private loadData(){
+  this.userSubscription = this.userService.getUsers().subscribe((userData: User[]) =>
+  {console.log(userData), this.items = userData; this.loadUsers()})
+}
+
 }
 
