@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit, OnDestroy  {
   public sort: SortDescriptor[] = [
   {
     field: 'amount',
-    dir: 'desc'
+    dir: 'asc'
   },
   ];
 
@@ -40,9 +40,9 @@ export class HomeComponent implements OnInit, OnDestroy  {
 
   public pageChange(event: PageChangeEvent): void {
     this.skip = event.skip;
-    this.loadUsers();
+    this.pageUsers();
   }
-  private loadUsers(): void {
+  private pageUsers(): void {
     this.gridView = {
         data: this.items.slice(this.skip, this.skip + this.pageSize),
         total: this.items.length
@@ -51,9 +51,8 @@ export class HomeComponent implements OnInit, OnDestroy  {
   public sortChange(sort: SortDescriptor[]): void {
     this.sort = sort;
     this.sortItems();
-  
 }
-// Need to fix sorting of the amount. Doesn't sort numbers correctly.
+
 private sortItems(): void {
   this.gridView = {
       data: orderBy(this.items, this.sort),
@@ -71,7 +70,7 @@ getColor(id: number, amount: number){
 private loadData(){
    return this.userSubscription = this.userService.getUsers()
   .subscribe((userData: User[]) =>
-  {console.log(userData), this.items = userData; this.loadUsers()})
+  {console.log(userData), this.items = userData; this.pageUsers()})
 }
 
 }
