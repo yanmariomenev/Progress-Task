@@ -69,7 +69,8 @@ getColor(id: number, amount: number){
  }
 
 private loadData(){
-  this.userSubscription = this.userService.getUsers().subscribe((userData: User[]) =>
+   return this.userSubscription = this.userService.getUsers()
+  .subscribe((userData: User[]) =>
   {console.log(userData), this.items = userData; this.loadUsers()})
 }
 
