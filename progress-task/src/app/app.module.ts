@@ -11,7 +11,12 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { InputsModule } from '@progress/kendo-angular-inputs';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditFormComponent } from './components/edit-form/edit-form.component';
+import { DialogsModule } from '@progress/kendo-angular-dialog';
+import { LabelModule } from '@progress/kendo-angular-label';
+
+
 
 
 
@@ -21,17 +26,21 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    EditFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     FormsModule,
     GridModule,
     BrowserAnimationsModule,
     DropDownsModule,
-    InputsModule
+    InputsModule,
+    DialogsModule,
+    LabelModule
   ],
   providers: [],
   bootstrap: [AppComponent]

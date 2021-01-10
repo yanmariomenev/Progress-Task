@@ -14,7 +14,6 @@
 [pageSize]="pageSize"
 [skip]="skip"
 [selectable]="selectableSettings"
-
 [style]="{'kendo-grid': '#888','color': 'purple'}"
 kendoGridSelectBy="email"
 [pageable]="true"
@@ -25,7 +24,15 @@ kendoGridSelectBy="email"
 }"
 [sort]="sort"
 (sortChange)="sortChange($event)"
+          (edit)="editHandler($event)"
+          (add)="addHandler($event)"
+          (remove)="removeHandler($event)"
+          
 >
+<ng-template kendoGridToolbarTemplate>
+    <button kendoGridAddCommand>Add new user</button>
+</ng-template>
+
 <kendo-grid-column field="id" title="Id" class="no-padding" width="20"
 [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}"
     [style]="{'background-color': '#888','color': '#fff'}"
@@ -37,29 +44,36 @@ kendoGridSelectBy="email"
         </span>
     </ng-template>
  </kendo-grid-column>
+
     <kendo-grid-column field="first_name" title="First name" width="50"
      [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}"
      [style]="{'background-color': '#888','color': '#fff'}"
      [footerStyle]="{'background-color': '#888','color': '#fff'}"
      >
     </kendo-grid-column>
+
     <kendo-grid-column field="last_name" title="Last name" width="50"
     [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}"
     [style]="{'background-color': '#888','color': '#fff'}"
     [footerStyle]="{'background-color': '#888','color': '#fff'}">
     </kendo-grid-column>
+
     <kendo-grid-column field="email" title="Email" width="90" 
     [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}">
     </kendo-grid-column>
+
     <kendo-grid-column field="country" title="Country" width="30"
     [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}">
     </kendo-grid-column>
+
     <kendo-grid-column field="ip_address" title="IP address" width="40"
     [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}">
     </kendo-grid-column>
+
     <kendo-grid-column field="currency" title="Currency" width="25"
     [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}">
     </kendo-grid-column>
+
     <kendo-grid-column field="amount" title="Amount" class="no-padding" width="60"
     [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}">
         <ng-template kendoGridCellTemplate let-gridView>
@@ -69,11 +83,19 @@ kendoGridSelectBy="email"
         </ng-template>
      </kendo-grid-column>
 
-    <!-- <kendo-grid-column field="Discontinued" title="Discontinued" width="120">
-        <ng-template kendoGridCellTemplate let-dataItem>
-            <input type="checkbox" [checked]="dataItem.Discontinued" disabled/>
+     <kendo-grid-command-column title="command" width="25" [headerStyle]="{'background-color': '#666','color': '#fff','line-height': '1em'}">
+        <ng-template kendoGridCellTemplate>
+            <button kendoGridEditCommand style="background: green; color:white;">Edit</button>
+            <button kendoGridRemoveCommand class="k-block" style="background: red; color:white;">Delete</button>
         </ng-template>
-    </kendo-grid-column> -->
+    </kendo-grid-command-column>
+
   </kendo-grid>
-  <h3>Remove id's</h3>
+
+  <p>Remove id's</p>
   <kendo-switch [(ngModel)]="checked"></kendo-switch>
+
+  <kendo-grid-edit-form [model]="editDataItem" [isNew]="isNew"
+  (save)="saveHandler($event)"
+  (cancel)="cancelHandler()">
+</kendo-grid-edit-form>

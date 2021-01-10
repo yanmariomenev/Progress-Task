@@ -1,0 +1,63 @@
+
+        <kendo-dialog *ngIf="active" [width]="300" [height]="450" (close)="closeForm()">
+            <kendo-dialog-titlebar>
+                {{ isNew ? 'Add new user' : 'Edit user' }}
+            </kendo-dialog-titlebar>
+
+            <form novalidate class="k-form" [formGroup]="editForm">
+                <kendo-formfield>
+                    <kendo-label [for]="first_name" text="First name"></kendo-label>
+                    <input formControlName="first_name" kendoTextBox #first_name required />
+
+                    <kendo-formhint>Type first name</kendo-formhint>
+                    <kendo-formerror>Error: first name is required</kendo-formerror>
+                </kendo-formfield>
+
+                <kendo-formfield>
+                    <kendo-label [for]="last_name" text="Last name"></kendo-label>
+                    <input formControlName="last_name" kendoTextBox #last_name required />
+
+                    <kendo-formhint>Type last name</kendo-formhint>
+                    <kendo-formerror>Error: last name is required</kendo-formerror>
+                </kendo-formfield>
+
+                <kendo-formfield>
+                    <kendo-label [for]="email" text="Email"></kendo-label>
+                    <input formControlName="email" kendoTextBox #email required />
+
+                    <kendo-formhint>Type new email</kendo-formhint>
+                    <kendo-formerror>Error: email is required</kendo-formerror>
+                </kendo-formfield>
+
+                <kendo-formfield>
+                    <kendo-label [for]="country" text="Country"></kendo-label>
+                    <input formControlName="country" kendoTextBox #country required />
+
+                    <kendo-formhint>Change country</kendo-formhint>
+                    <kendo-formerror>Error: country is required</kendo-formerror>
+                </kendo-formfield>
+
+                <kendo-formfield>
+                    <kendo-label [for]="currency" text="Currency"></kendo-label>
+                    <input formControlName="currency" kendoTextBox #currency required />
+
+                    <kendo-formhint>Change currency</kendo-formhint>
+                    <kendo-formerror>Error: currency is required</kendo-formerror>
+                </kendo-formfield>
+
+
+                <kendo-formfield>
+                    <kendo-label [for]="amount" text="Available Amount"></kendo-label>
+                    <kendo-numerictextbox formControlName="amount" #amount required> </kendo-numerictextbox>
+
+                    <kendo-formhint>Change amount</kendo-formhint>
+                    <kendo-formerror>Error: Amount cannot be less than 0</kendo-formerror>
+                </kendo-formfield>
+
+            </form>
+
+            <kendo-dialog-actions>
+                <button class="k-button" (click)="onCancel($event)">Cancel</button>
+                <button class="k-button k-primary" [disabled]="!editForm.valid" (click)="onSave($event)">Save</button>
+            </kendo-dialog-actions>
+        </kendo-dialog>
