@@ -8,11 +8,15 @@
         <label class="k-checkbox-label" for="multiple"> Toggle multiple columns sorting </label>
     </label>
 </div>
-<kendo-grid 
+<kendo-grid
 [data]="gridView" 
-[height]="450" 
+[height]="450"
 [pageSize]="pageSize"
 [skip]="skip"
+[selectable]="selectableSettings"
+
+[style]="{'kendo-grid': '#888','color': 'purple'}"
+kendoGridSelectBy="email"
 [pageable]="true"
 (pageChange)="pageChange($event)"
 [sortable]="{

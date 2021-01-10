@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { GridDataResult, PageChangeEvent } from '@progress/kendo-angular-grid';
+import { GridDataResult, PageChangeEvent, SelectableSettings } from '@progress/kendo-angular-grid';
 import { SortDescriptor, orderBy  } from '@progress/kendo-data-query';
 import { Subscription } from 'rxjs';
 import { UserService } from 'src/app/core/services/user.service';
@@ -66,6 +66,10 @@ getColor(id: number, amount: number){
  getColorForAmount(amount: number){
   return amount >= 500 ? 'green' : 'red';
  }
+
+ public selectableSettings: SelectableSettings = {
+  enabled: true
+};
 
 private loadData(){
    return this.userSubscription = this.userService.getUsers()

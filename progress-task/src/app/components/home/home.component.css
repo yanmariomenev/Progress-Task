@@ -1,9 +1,53 @@
+/* html .kendo-grid tr:hover {
+  background: transparent;
+}
 
-.k-grid .no-padding {
+html .kendo-grid tr.k-alt:hover {
+
+  background: #fbfbfb;
+} */
+
+
+/* .k-grid .k-grid-content{
+  background: transparent;
+} */
+/* 
+.k-grid .k-state-selected {
+  background-color: #C4FAEC;   
+  color: blue;
+}
+
+.k-grid .k-state-selected:hover { 
+  background-color: #C4FAEC;  
+  color: red;
+}
+
+.k-grid tr:hover,
+.k-grid td.k-state-selected:hover,
+.k-grid tr.k-state-selected:hover td
+{  
+  color: #000000;   
+  background-color: #C4FAEC;
+} */
+
+/* html .k-grid tr.k-state-selected:hover {
+  background: blue;
+}
+
+html .k-grid tr.k-state-selected.k-alt:hover {
+  background: blue;
+}
+
+
+
+  /* .k-grid tr:hover .no-padding {
     padding: 0;
+    background:transparent;
   }
+  
    .whole-cell {
      display: block;
-     padding: 8px 12px; /* depends on theme */
+     padding: 8px 12px;
    }
-   
+
+    */
