@@ -56,8 +56,12 @@ html .k-grid tr.k-state-selected.k-alt:hover {
       background-color: red;
       color: white;
     } */
-    .k-grid tbody tr:hover {
-      background-color: purple;
+    kendo-grid, tbody , kendo-grid-column:hover {
+      border-color: #673ab7;
+    }
+    kendo-grid, tbody, kendo-grid-column tr td :active {
+      background: #673ab7;
+      box-shadow: none;
     }
 
     .btn-static {
@@ -71,4 +75,23 @@ html .k-grid tr.k-state-selected.k-alt:hover {
       -webkit-box-shadow: inset 0 0 0px white;
       box-shadow:         inset 0 0 0px white;
     }
+
+    .k-grid:hover,
+    .k-grid:active {
+      background: #E95E35;
+      border-color: #E95E35;
+    }
+
+    .k-grid-content:hover,
+    .k-grid-content:active {
+      background: #E95E35;
+      border-color: #E95E35;
+    }
     
+html .k-grid tr:hover {
+  background: transparent;
+}
+ 
+html .k-grid tr.k-alt:hover {
+  background: #f1f1f1;
+}
