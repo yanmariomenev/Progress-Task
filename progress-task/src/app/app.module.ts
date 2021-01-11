@@ -1,23 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { GridModule } from '@progress/kendo-angular-grid';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { KendoUiModule } from './kendo/kendo-ui/kendo-ui.module';
+import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
-import { InputsModule } from '@progress/kendo-angular-inputs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditFormComponent } from './components/edit-form/edit-form.component';
-import { DialogsModule } from '@progress/kendo-angular-dialog';
-import { LabelModule } from '@progress/kendo-angular-label';
-
-
-
 
 
 
@@ -35,12 +27,8 @@ import { LabelModule } from '@progress/kendo-angular-label';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    GridModule,
+    KendoUiModule,
     BrowserAnimationsModule,
-    DropDownsModule,
-    InputsModule,
-    DialogsModule,
-    LabelModule
   ],
   providers: [],
   bootstrap: [AppComponent]

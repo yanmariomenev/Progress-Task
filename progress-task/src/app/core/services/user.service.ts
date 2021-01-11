@@ -41,7 +41,7 @@ export class UserService extends BehaviorSubject<any[]>{
 
   public remove(user: User) {
     
-    var id = user.id;
+    var id ="/" + user.id;
     this.http.delete(USERS_URL + user.id).subscribe(data => {
       console.log(data);
     });
