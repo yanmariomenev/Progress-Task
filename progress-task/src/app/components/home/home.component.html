@@ -24,9 +24,9 @@ kendoGridSelectBy="email"
 }"
 [sort]="sort"
 (sortChange)="sortChange($event)"
-          (edit)="editHandler($event)"
-          (add)="addHandler($event)"
-          (remove)="removeHandler($event)"
+(edit)="editHandler($event)"
+(add)="addHandler($event)"
+(remove)="removeHandler($event)"
           
 >
 <ng-template kendoGridToolbarTemplate>
@@ -92,7 +92,7 @@ kendoGridSelectBy="email"
 
   </kendo-grid>
 
-  <p>Remove id's</p>
+  <div class="btn btn-static">Remove id's</div>
   <kendo-switch [(ngModel)]="checked"></kendo-switch>
 
   <kendo-grid-edit-form [model]="editDataItem" [isNew]="isNew"

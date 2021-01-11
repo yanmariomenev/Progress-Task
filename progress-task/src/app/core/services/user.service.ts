@@ -4,10 +4,10 @@ import { BehaviorSubject } from 'rxjs';
 import { User } from 'src/app/components/models/IUser.model';
 
 
-const CREATE_ACTION = 'create';
-const UPDATE_ACTION = 'update';
-const REMOVE_ACTION = 'destroy';
-const USERS_URL ='http://my-json-server.typicode.com/yanmariomenev/Progress-Task/users'
+// const CREATE_ACTION = 'create';
+// const UPDATE_ACTION = 'update';
+// const REMOVE_ACTION = 'destroy';
+const USERS_URL ='https://my-json-server.typicode.com/yanmariomenev/Progress-Task/users'
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class UserService extends BehaviorSubject<any[]>{
 
 
   getUsers(){
-    return this.http.get('http://my-json-server.typicode.com/yanmariomenev/Progress-Task/users');
+    return this.http.get(USERS_URL);
   }
 
   public save(data: User, isNew?: boolean) {
@@ -42,7 +42,7 @@ export class UserService extends BehaviorSubject<any[]>{
   public remove(user: User) {
     
     var id = user.id;
-    this.http.delete('http://my-json-server.typicode.com/yanmariomenev/Progress-Task/users/' + user.id).subscribe(data => {
+    this.http.delete(USERS_URL + user.id).subscribe(data => {
       console.log(data);
     });
 }

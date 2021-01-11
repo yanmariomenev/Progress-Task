@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { GridDataResult, PageChangeEvent, SelectableSettings } from '@progress/kendo-angular-grid';
 import { SortDescriptor, orderBy, State  } from '@progress/kendo-data-query';
-import { Observable, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { UserService } from 'src/app/core/services/user.service';
 import { IUser, User } from '../models/IUser.model';
 import { NewUser } from '../models/user';
@@ -16,16 +16,8 @@ export class HomeComponent implements OnInit, OnDestroy  {
   constructor(private userService: UserService) {
    }
 
-  //  public view: Observable<GridDataResult>;
-    public gridState: State = {
-        sort: [],
-        skip: 0,
-        take: 10
-      };
-
-    public editDataItem: User;
-    public isNew: boolean;
-
+  public editDataItem: User;
+  public isNew: boolean;
   public pageSize = 10;
   public skip = 0;
   public userSubscription: Subscription;
@@ -116,4 +108,3 @@ public removeHandler({dataItem}) {
 }
 
 }
-

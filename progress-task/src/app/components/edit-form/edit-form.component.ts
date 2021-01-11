@@ -16,8 +16,6 @@ export class EditFormComponent {
         last_name: new FormControl('', Validators.required),
         country: new FormControl('', Validators.required),
         email: new FormControl('', Validators.compose([Validators.required,Validators.email])),
-        // ip_address: new FormControl(Validators.required),
-        //Add a validator for amount
         currency: new FormControl('',Validators.required),
         amount: new FormControl(Validators.required),
     });
